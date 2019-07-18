@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-    <title>Pet Exchange</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <title>Pet Exchange</title>
 </head>
 <body>
+    <!--scripting strats from here-->
+       <script >
+            $(document).ready(function () {
+            $(function () {
+            $('li a').click(function (e) {
+                e.preventDefault();
+                $('li a').removeClass('active');
+                $(this).addClass('active');
+             });
+           });
+         });
+       </script>
+    <!--scripting ends here-->
+   
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">
             <img src="https://i.imgur.com/FFQZBux.png" width="30" height="30" alt="">
@@ -19,20 +36,22 @@
             <span class="navbar-toggler-icon"></span>
         </button>              
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item  active">
-                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item ">
+                    <a class="nav-link active " href="/"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/signin"><i class="fas fa-sign-in-alt"></i> Signin</a>
+                    <a class="nav-link " href="/signin"><i class="fas fa-sign-in-alt"></i> Signin</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/signup"><i class="fas fa-user-plus"></i> Signup</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+           <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
+        
     </nav>
+   
